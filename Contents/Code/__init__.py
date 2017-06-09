@@ -1,14 +1,18 @@
+NAME = 'NOS'
+ART = 'art-default.jpg'
+ICON = 'icon-default.png'
+
 ####################################################################################################
 def Start():
 
-	ObjectContainer.title1 = 'NOS'
+	ObjectContainer.title1 = NAME
 
 	HTTP.CacheTime = 300
 	HTTP.Headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36'
 	HTTP.Headers['Cookie'] = 'npo_cc=30'
 
 ####################################################################################################
-@handler('/video/nos', 'NOS')
+@handler('/video/nos', NAME, art=ART, thumb=ICON)
 def MainMenu():
 
 	oc = ObjectContainer()
