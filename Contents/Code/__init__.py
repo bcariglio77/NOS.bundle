@@ -59,7 +59,7 @@ def Videos(title, url):
 		if not video_url.startswith('https://'):
 			video_url = 'https://nos.nl/%s' % video_url.lstrip('/')
 
-		video_title = video.xpath('.//time/text()')[0].strip()
+		video_title = video.xpath('.//time//text()')[0].strip()
 
 		oc.add(VideoClipObject(
 			url = video_url,
